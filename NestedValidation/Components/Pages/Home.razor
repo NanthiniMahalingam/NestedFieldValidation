@@ -1,0 +1,49 @@
+﻿@page "/"
+@using NestedValidation.Models
+
+<PageTitle>Edit order</PageTitle>
+
+<h1>Edit order</h1>
+
+<EditForm Model="Model" FormName="order" OnValidSubmit="Submit">
+    <DataAnnotationsValidator />
+
+    <div class="mb-3">
+        <label for="shipping-street" class="form-label">Shipping street</label>
+        <InputText id="shipping-street"
+                   class="form-control"
+                   @bind-Value="Model.ShippingAddress.Street" />
+        <ValidationMessage For="() => Model.ShippingAddress.Street" />
+    </div>
+
+    <button type="submit" class="btn btn-primary me-2">Place order</button>
+    <button type="submit" class="btn btn-secondary" formnovalidate>
+        Place order without browser validation
+    </button>
+</EditForm>
+
+@if (orderSubmitted)
+{
+    <div class="alert alert-success mt-3" role="status">
+        The order is valid and has been submitted.
+    </div>
+}
+
+@code {
+    [SupplyParameterFromForm(Name = "Model")]
+    private Order? FormModel { get; set; }
+
+    private Order Model => FormModel!;
+
+    private bool orderSubmitted;
+
+    protected override void OnInitialized()
+    {
+        FormModel ??= new();
+    }
+
+    private void Submit()
+    {
+        orderSubmitted = true;
+    }
+}
