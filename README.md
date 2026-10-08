@@ -11,6 +11,7 @@ an empty shipping street displays the `Street is required.` validation message.
 | .NET runtime / ASP.NET Core runtime | `11.0.0-rc.1.26425.128` |
 | .NET SDK | `11.0.100-rc.1.26425.128` |
 | Target framework | `net11.0` |
+| Test commit | [`ea39c345b0b3d527a0c6d1abf2224f3114c77d88`](https://github.com/NanthiniMahalingam/NestedFieldValidation/tree/ea39c345b0b3d527a0c6d1abf2224f3114c77d88) |
 
 The required SDK is pinned by `NestedValidation/global.json`.
 
@@ -85,3 +86,18 @@ and clear existing requests. Run these three checks in order:
 The two invalid checks must display the same field message:
 **Street is required.** Only the corrected submit must display the order
 confirmation.
+
+## Evidence revisions
+
+The tested source and committed evidence baseline is
+`ea39c345b0b3d527a0c6d1abf2224f3114c77d88`.
+
+The following supplemental evidence was captured while finalizing the report
+and must be included with the report documentation in a later commit:
+
+- [Corrected valid POST wire evidence](Evidence/CorrectedValidPostWireEvidence.json)
+  contains privacy-redacted request headers, payload, complete response headers
+  and body, the generated nested browser-validation rule, and the valid-order
+  confirmation.
+- [Corrected valid POST confirmation](Evidence/CorrectedValidPostConfirmation.png)
+  shows the submitted street and the returned confirmation.

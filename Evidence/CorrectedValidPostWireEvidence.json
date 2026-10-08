@@ -1,0 +1,34 @@
+{
+  "capturedAt": "2026-10-08T13:37:10.829Z",
+  "purpose": "Corrected valid POST wire evidence and initial generated nested browser-validation markup",
+  "privacy": "Cookie, authorization, and antiforgery-token values are redacted.",
+  "initialGeneratedMarkup": {
+    "input": "<input id=\"shipping-street\" name=\"Model.ShippingAddress.Street\" class=\"form-control valid\" value=\"123 Main Street\">",
+    "form": "<form method=\"post\" action=\"/\" novalidate=\"\"><input type=\"hidden\" name=\"_handler\" value=\"order\">\n\n    <div class=\"mb-3\"><label for=\"shipping-street\" class=\"form-label\">Shipping street</label>\n        <input id=\"shipping-street\" name=\"Model.ShippingAddress.Street\" class=\"form-control valid\" value=\"123 Main Street\">\n        <div class=\"validation-message\" data-valmsg-for=\"Model.ShippingAddress.Street\" data-valmsg-replace=\"true\" hidden=\"\" role=\"alert\" aria-live=\"assertive\"></div></div>\n\n    <button type=\"submit\" class=\"btn btn-primary me-2\">Place order</button>\n    <button type=\"submit\" class=\"btn btn-secondary\" formnovalidate=\"\">\n        Place order without browser validation\n    </button><blazor-client-validation-data data-rules=\"{&quot;fields&quot;:[{&quot;name&quot;:&quot;Model.ShippingAddress.Street&quot;,&quot;rules&quot;:[{&quot;name&quot;:&quot;required&quot;,&quot;message&quot;:&quot;Street is required.&quot;}]}]}\"></blazor-client-validation-data></form>"
+  },
+  "correctedValidPost": {
+    "request": {
+      "method": "POST",
+      "url": "https://localhost:7125/",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+        "origin": "https://localhost:7125",
+        "referer": "https://localhost:7125/",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.139.1 Chrome/150.0.7871.250 Electron/43.6.0 Safari/537.36"
+      },
+      "postData": "_handler=order&Model.ShippingAddress.Street=123+Main+Street"
+    },
+    "response": {
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "blazor-enhanced-nav": "allow",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 08 Oct 2026 13:37:10 GMT",
+        "server": "Kestrel"
+      },
+      "body": "<!DOCTYPE html>\r\n<html lang=\"en\"><head><meta charset=\"utf-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <base href=\"/\" />\r\n    \r\n    <link rel=\"stylesheet\" href=\"lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css\" />\r\n    <link rel=\"stylesheet\" href=\"app.zxiz86ws8d.css\" />\r\n    <link rel=\"stylesheet\" href=\"NestedValidation.hilnvjvqvc.styles.css\" />\r\n    <script type=\"importmap\">{\r\n  \"imports\": {\r\n    \"./Components/Layout/NavMenu.razor.js\": \"./Components/Layout/NavMenu.4213728dye.razor.js\",\r\n    \"./_framework/blazor.server.js\": \"./_framework/blazor.server.f12kpep50j.js\",\r\n    \"./_framework/blazor.web.js\": \"./_framework/blazor.web.ev8z2seuww.js\",\r\n    \"./lib/bootstrap/dist/js/bootstrap.bundle.js\": \"./lib/bootstrap/dist/js/bootstrap.bundle.6cfz1n2cew.js\",\r\n    \"./lib/bootstrap/dist/js/bootstrap.bundle.min.js\": \"./lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js\",\r\n    \"./lib/bootstrap/dist/js/bootstrap.esm.min.js\": \"./lib/bootstrap/dist/js/bootstrap.esm.min.jj8uyg4cgr.js\",\r\n    \"./lib/bootstrap/dist/js/bootstrap.esm.js\": \"./lib/bootstrap/dist/js/bootstrap.esm.vr1egmr9el.js\",\r\n    \"./lib/bootstrap/dist/js/bootstrap.min.js\": \"./lib/bootstrap/dist/js/bootstrap.min.63fj8s7r0e.js\",\r\n    \"./lib/bootstrap/dist/js/bootstrap.js\": \"./lib/bootstrap/dist/js/bootstrap.notf2xhcfb.js\"\r\n  }\r\n}</script>\r\n    <link rel=\"icon\" type=\"image/png\" href=\"favicon.png\">\r\n    <title>Edit order</title></head>\r\n\r\n<body><div class=\"page\" b-cfbaqs70e5><div class=\"sidebar\" b-cfbaqs70e5><script type=\"module\" src=\"Components/Layout/NavMenu.4213728dye.razor.js\" b-8n7g645y8d></script>\r\n\r\n<div class=\"top-row ps-3 navbar navbar-dark\" b-8n7g645y8d><div class=\"container-fluid\" b-8n7g645y8d><a class=\"navbar-brand\" href b-8n7g645y8d>NestedValidation</a></div></div>\r\n\r\n<input type=\"checkbox\" title=\"Navigation menu\" class=\"navbar-toggler\" b-8n7g645y8d>\r\n\r\n<div id=\"nav-scrollable\" class=\"nav-scrollable\" b-8n7g645y8d><nav class=\"nav flex-column\" b-8n7g645y8d><div class=\"nav-item px-3\" b-8n7g645y8d><a href=\"\" class=\"nav-link active\" aria-current=\"page\"><span class=\"bi bi-house-door-fill-nav-menu\" aria-hidden=\"true\" b-8n7g645y8d></span> Home\r\n            </a></div>\r\n\r\n        <div class=\"nav-item px-3\" b-8n7g645y8d><a href=\"weather\" class=\"nav-link\"><span class=\"bi bi-list-nested-nav-menu\" aria-hidden=\"true\" b-8n7g645y8d></span> Weather\r\n            </a></div></nav></div></div>\r\n\r\n    <main b-cfbaqs70e5><div class=\"top-row px-4\" b-cfbaqs70e5><a href=\"https://learn.microsoft.com/aspnet/core/\" target=\"_blank\" b-cfbaqs70e5>About</a></div>\r\n\r\n        <article class=\"content px-4\" b-cfbaqs70e5>\r\n\r\n<h1>Edit order</h1>\r\n\r\n<form method=\"post\" action=\"/\"><input type=\"hidden\" name=\"_handler\" value=\"order\" />\r\n\r\n    <div class=\"mb-3\"><label for=\"shipping-street\" class=\"form-label\">Shipping street</label>\r\n        <input id=\"shipping-street\" name=\"Model.ShippingAddress.Street\" class=\"form-control valid\" value=\"123 Main Street\" />\r\n        <div class=\"validation-message\" data-valmsg-for=\"Model.ShippingAddress.Street\" data-valmsg-replace=\"true\" hidden></div></div>\r\n\r\n    <button type=\"submit\" class=\"btn btn-primary me-2\">Place order</button>\r\n    <button type=\"submit\" class=\"btn btn-secondary\" formnovalidate>\r\n        Place order without browser validation\r\n    </button><blazor-client-validation-data data-rules=\"{&quot;fields&quot;:[{&quot;name&quot;:&quot;Model.ShippingAddress.Street&quot;,&quot;rules&quot;:[{&quot;name&quot;:&quot;required&quot;,&quot;message&quot;:&quot;Street is required.&quot;}]}]}\"></blazor-client-validation-data></form><div class=\"alert alert-success mt-3\" role=\"status\">\r\n        The order is valid and has been submitted.\r\n    </div></article></main></div>\r\n        <blazor-focus-on-navigate selector=\"h1\"></blazor-focus-on-navigate>\r\n    <script src=\"_framework/blazor.web.ev8z2seuww.js\"></script>\r\n<!-- Visual Studio Browser Link -->\r\n<script type=\"text/javascript\" src=\"/_vs/browserLink\" async=\"async\" id=\"__browserLink_initializationData\" data-requestId=\"7d3e8cb2f0874fff841d0c8e27628f69\" data-requestMappingFromServer=\"false\" data-connectUrl=\"http://localhost:49245/1f09f9588ed74e788b0ed6c22d1bb772/browserLink\"></script>\r\n<!-- End Browser Link -->\r\n<script src=\"/_framework/aspnetcore-browser-refresh.js\"></script></body></html>"
+    }
+  }
+}
