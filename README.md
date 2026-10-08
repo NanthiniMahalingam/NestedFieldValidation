@@ -11,7 +11,7 @@ an empty shipping street displays the `Street is required.` validation message.
 | .NET runtime / ASP.NET Core runtime | `11.0.0-rc.1.26425.128` |
 | .NET SDK | `11.0.100-rc.1.26425.128` |
 | Target framework | `net11.0` |
-| Test commit | [`ea39c345b0b3d527a0c6d1abf2224f3114c77d88`](https://github.com/NanthiniMahalingam/NestedFieldValidation/tree/ea39c345b0b3d527a0c6d1abf2224f3114c77d88) |
+| Test commit | [`dde733e3d352f079c0d11090f50afe2c42c4f7e7`](https://github.com/NanthiniMahalingam/NestedFieldValidation/tree/dde733e3d352f079c0d11090f50afe2c42c4f7e7) |
 
 The required SDK is pinned by `NestedValidation/global.json`.
 
@@ -89,11 +89,10 @@ confirmation.
 
 ## Evidence revisions
 
-The tested source and committed evidence baseline is
-`ea39c345b0b3d527a0c6d1abf2224f3114c77d88`.
+The tested source and complete committed evidence revision is
+`dde733e3d352f079c0d11090f50afe2c42c4f7e7`.
 
-The following supplemental evidence was captured while finalizing the report
-and must be included with the report documentation in a later commit:
+The revision includes the following supplemental evidence:
 
 - [Corrected valid POST wire evidence](Evidence/CorrectedValidPostWireEvidence.json)
   contains privacy-redacted request headers, payload, complete response headers
