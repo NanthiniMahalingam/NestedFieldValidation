@@ -18,6 +18,19 @@ The required SDK is pinned by `NestedValidation/global.json`.
 
 - Install .NET SDK `11.0.100-rc.1.26425.128`.
 
+## Create the sample
+
+The sample was created as a statically rendered Blazor Web App:
+
+```powershell
+dotnet new blazor -o NestedValidation --interactivity None
+```
+
+The files in this repository contain the scenario-specific nested model,
+validation registration, and form changes applied to that generated project.
+The checked-in `NestedValidation/global.json` preserves the SDK used for the
+test.
+
 ## Restore and build
 
 Run all commands from the `NestedValidation` directory so that the SDK version
@@ -27,6 +40,7 @@ in `global.json` is applied:
 cd NestedValidation
 dotnet --version
 dotnet restore
+dotnet build
 ```
 
 The `dotnet --version` command must print `11.0.100-rc.1.26425.128`.
@@ -45,13 +59,29 @@ dotnet run --configuration Debug --launch-profile http
 
 Open <http://localhost:5292>.
 
-## Verify nested-field validation
+## Verify nested-field validation manually
 
-Repeat these steps for each configuration covered above:
+Open the browser's developer tools before testing, select the **Network** tab,
+and clear existing requests. Run these three checks in order:
 
-1. Leave **Shipping street** empty.
-2. Select **Place order without browser validation**.
-3. Verify that **Street is required.** appears and that the success message is
-   not displayed.
-4. Enter a value in **Shipping street** and select **Place order**.
-5. Verify that **The order is valid and has been submitted.** appears.
+1. **Ordinary empty submit**
+   - Leave **Shipping street** empty.
+   - Select **Place order**.
+   - Verify that **Street is required.** appears beside the field.
+   - Verify that the Network tab contains no POST for this action.
+2. **Empty submit with browser validation bypassed**
+   - Clear the Network tab and leave **Shipping street** empty.
+   - Select **Place order without browser validation**.
+   - Verify that a POST is sent and that the server-returned HTML contains
+     **Street is required.** for `Model.ShippingAddress.Street`.
+   - Verify that the same message appears beside the field and that
+     **The order is valid and has been submitted.** is not displayed.
+3. **Corrected ordinary submit**
+   - Clear the Network tab and enter a street, such as `123 Main Street`.
+   - Select **Place order**.
+   - Verify that a POST is sent and that
+     **The order is valid and has been submitted.** appears.
+
+The two invalid checks must display the same field message:
+**Street is required.** Only the corrected submit must display the order
+confirmation.
