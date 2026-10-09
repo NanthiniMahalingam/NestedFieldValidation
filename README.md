@@ -11,7 +11,7 @@ an empty shipping street displays the `Street is required.` validation message.
 | .NET runtime / ASP.NET Core runtime | `11.0.0-rc.1.26425.128` |
 | .NET SDK | `11.0.100-rc.1.26425.128` |
 | Target framework | `net11.0` |
-| Test commit | [`dde733e3d352f079c0d11090f50afe2c42c4f7e7`](https://github.com/NanthiniMahalingam/NestedFieldValidation/tree/dde733e3d352f079c0d11090f50afe2c42c4f7e7) |
+| Test commit | [`f01040bd205f6aade6c1e9e5ec45cc47c397c1c3`](https://github.com/NanthiniMahalingam/NestedFieldValidation/tree/f01040bd205f6aade6c1e9e5ec45cc47c397c1c3) |
 
 The required SDK is pinned by `NestedValidation/global.json`.
 
@@ -90,7 +90,7 @@ confirmation.
 ## Evidence revisions
 
 The tested source and complete committed evidence revision is
-`dde733e3d352f079c0d11090f50afe2c42c4f7e7`.
+`f01040bd205f6aade6c1e9e5ec45cc47c397c1c3`.
 
 The revision includes the following supplemental evidence:
 
