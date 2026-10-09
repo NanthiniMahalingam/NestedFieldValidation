@@ -100,3 +100,12 @@ The revision includes the following supplemental evidence:
   confirmation.
 - [Corrected valid POST confirmation](Evidence/CorrectedValidPostConfirmation.png)
   shows the submitted street and the returned confirmation.
+
+### Additional working-tree evidence
+
+- [Invalid nested street POST wire evidence](Evidence/InvalidNestedStreetPostWireEvidence.json)
+  contains the `POST` method and URL, `_handler=order`, an empty
+  `Model.ShippingAddress.Street` value, response status and headers, complete
+  response HTML with `Street is required.` associated with the nested field,
+  and verification that the valid-order confirmation is absent. Sensitive
+  cookie, authorization, and antiforgery-token values are redacted.
